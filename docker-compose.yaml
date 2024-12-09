@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  fraimo-server:
+    image: fraimo-server
+    ports:
+      - "8080:80"
+  cache:
+    image: redis:latest
+    restart: always
+    ports:
+      - '6379:6379'
